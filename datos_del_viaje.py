@@ -32,6 +32,7 @@ def convertir_segundos_a_horas_minutos_segundos(segundos):
     return horas, minutos, segundos
 
 def imprimir_narrativa_viaje(ciudad_origen, ciudad_destino, distancia, duracion_horas, duracion_minutos, duracion_segundos, combustible_requerido):
+    print ("*********************************************************************************************************************************")
     print ("datos del viaje:")
     print (f"Origen: {ciudad_origen}")
     print (f"Destino: {ciudad_destino}")
@@ -42,7 +43,6 @@ def imprimir_narrativa_viaje(ciudad_origen, ciudad_destino, distancia, duracion_
 # Solicitar ciudades de origen y destino al usuario
 ciudad_origen = input("Ciudad de Origen: ")
 ciudad_destino = input("Ciudad de Destino: ")
-
 
 # Obtener distancia y duración del viaje
 distancia, duracion_segundos = obtener_distancia_y_duracion(ciudad_origen, ciudad_destino)
@@ -57,15 +57,16 @@ duracion_horas, duracion_minutos, duracion_segundos = convertir_segundos_a_horas
 
 imprimir_narrativa_viaje(ciudad_origen, ciudad_destino, distancia, duracion_horas, duracion_minutos, duracion_segundos, combustible_requerido)
 print ("")
-print ("*******************************************************************************************************************")
+print ("*********************************************************************************************************************************")
 print ("narrativa:")
-print ("Su viaje desde la ciudad de " + str(ciudad_origen) + " hasta la ciudad de " + str(ciudad_destino) + " tiene una duración de: " + str(duracion_horas) + " horas, " + str(duracion_minutos) + " minutos y " + str(duracion_segundos) + " segundos")
+print ("Su viaje desde la ciudad de " + str(ciudad_origen) + " hasta la ciudad de " + str(ciudad_destino))
+print ("Tiene una duración de " + str(duracion_horas) + " horas, " + str(duracion_minutos) + " minutos y " + str(duracion_segundos) + " segundos.")
 print ("La distancia de su viaje tiene un alcance de " + str(distancia) + " Kilometros.")
-print ("Finalmente la gasolina que utilizará en total para su viaje es de " + f"{combustible_requerido:.1f}" +  " Litros.")
-print ("*******************************************************************************************************************")
+print ("Finalmente la gasolina que utilizará en total para su viaje es de " + f"{combustible_requerido:.1f}" + " Litros.")
+print ("*********************************************************************************************************************************")
 print ("")
 
 while True:
-	opcion = input("Presione 's' para salir: ")
-	if opcion.lower() == 's':
-	    break
+        opcion = input("Presione 's' para salir: ")
+        if opcion.lower() == 's':
+            break
